@@ -1,0 +1,32 @@
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet"><link/>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <title>Fruit's Shop</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">Fruit's Shop</span>
+</nav>
+<div class="ml-5">
+    <div class="mt-4">
+        <div class="row">
+            <h5>Welcome, please load files!</h5>
+        </div>
+    </div>
+    <div class="mt-4">
+        <div class="row">
+            <form method="POST" enctype="multipart/form-data" action="/">
+                <table class="table">
+                    <tr><td>Product prices:</td><td><input type="file" name="file1" /></td></tr>
+                    <tr><td>Purchased products:</td><td><input type="file" name="file2" /></td></tr>
+                    <tr></tr>
+                    <tr><td><input type="submit" value="Get Bill" /></td><td></td></tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

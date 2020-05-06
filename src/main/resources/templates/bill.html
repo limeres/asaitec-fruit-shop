@@ -1,0 +1,52 @@
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet"><link/>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <title>Fruit's Shop</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">Fruit's Shop</span>
+</nav>
+<div class="ml-5">
+    <div th:if="${message}" class="mt-4 ml-3">
+        <h2 th:text="${message}"/>
+    </div>
+    <table class="table w-50 mt-4 ml-3">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Items</th>
+            <th scope="col">Price</th>
+            <th style="text-align:right" scope="col">TOTAL</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="billLine : ${billList}">
+            <td th:text="${billLine.productName}"></td>
+            <td th:text="${billLine.numItem}"></td>
+            <td th:text="${billLine.price}"></td>
+            <td align="right" th:text="${billLine.total}"></td>
+        </tr>
+        <tr th:each="billOffer : ${billListDiscounts}">
+            <td align="right" colspan="4" th:text="${billOffer}"></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td align="right" style="font-style: italic; font-size:10px; color:#C0C0C0" colspan="4">
+                *All prices are in EUROS
+            </td>
+        </tr>
+        <tr>
+            <td align="right" colspan="4">
+                <input type="button"  onclick="location.href='/'" value="Home">
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+
+</body>
+</html>
