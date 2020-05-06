@@ -1,6 +1,9 @@
 # asaitec-fruit-shop
  Asaitec Java Technical Test
  
+ 
+ #### JAR
+ 
  You can find JAR in:
  https://github.com/limeres/asaitec-fruit-shop/tree/master/files 
  
@@ -15,7 +18,9 @@
   ```
  localhost:8080
  ```
- 
+
+ #### TRY
+
 For try it, first load product and purchased files in main page. 
 
 You can find file examples in: 
